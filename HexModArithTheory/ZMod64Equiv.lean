@@ -20,7 +20,7 @@ equivalence and the immediate simp lemmas used by downstream Mathlib-side
 libraries.
 -/
 
-namespace HexModArithMathlib
+namespace HexModArithTheory
 
 open Hex
 
@@ -52,7 +52,7 @@ theorem val_toZMod (a : Hex.ZMod64 p) :
 
 /-- Round-trip {name}`Hex.ZMod64` → {name}`ZMod` →
 {name}`Hex.ZMod64` is the identity. This is the left-inverse law making
-{name}`HexModArithMathlib.ZMod64.toZMod` injective; a caller that transfers a
+{name}`HexModArithTheory.ZMod64.toZMod` injective; a caller that transfers a
 residue to Mathlib and back recovers it unchanged. -/
 @[simp, grind =]
 theorem ofZMod_toZMod (a : Hex.ZMod64 p) :
@@ -64,7 +64,7 @@ theorem ofZMod_toZMod (a : Hex.ZMod64 p) :
 
 /-- Round-trip {name}`ZMod` → {name}`Hex.ZMod64` →
 {name}`ZMod` is the identity. Together with
-{name}`HexModArithMathlib.ZMod64.ofZMod_toZMod`, this shows the two conversions
+{name}`HexModArithTheory.ZMod64.ofZMod_toZMod`, this shows the two conversions
 are mutually inverse and define a ring equivalence. -/
 @[simp, grind =]
 theorem toZMod_ofZMod (a : ZMod p) :
@@ -106,7 +106,7 @@ theorem ofZMod_one :
   rw [← toZMod_one]
   exact ofZMod_toZMod 1
 
-/-- {name}`HexModArithMathlib.ZMod64.toZMod` is additive, so callers can push
+/-- {name}`HexModArithTheory.ZMod64.toZMod` is additive, so callers can push
 the conversion through a sum and transfer additive
 {name}`ZMod` identities back to {name}`Hex.ZMod64`. -/
 @[simp, grind =]
@@ -154,7 +154,7 @@ theorem toZMod_sub (a b : Hex.ZMod64 p) :
         (sub_eq_add_neg (((a.toNat : Nat) : ZMod p))
           (((b.toNat : Nat) : ZMod p))).symm
 
-/-- {name}`HexModArithMathlib.ZMod64.toZMod` is multiplicative, so callers can
+/-- {name}`HexModArithTheory.ZMod64.toZMod` is multiplicative, so callers can
 push the conversion through a product and transfer multiplicative
 {name}`ZMod` identities back to {name}`Hex.ZMod64`. -/
 @[simp, grind =]
@@ -241,4 +241,4 @@ theorem equiv_symm_apply (a : ZMod p) :
 
 end ZMod64
 
-end HexModArithMathlib
+end HexModArithTheory

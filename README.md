@@ -1,4 +1,4 @@
-# hex-mod-arith-mathlib
+# hex-mod-arith-theory
 
 Part of [`hex`](https://github.com/kim-em/hex-dev), a computer algebra
 library for Lean 4. The aim is fast executable code, fully verified, built
@@ -15,13 +15,13 @@ standard Mathlib semantics.
 
 ```toml
 [[require]]
-name = "hex-mod-arith-mathlib"
-git = "https://github.com/leanprover/hex-mod-arith-mathlib.git"
+name = "hex-mod-arith-theory"
+git = "https://github.com/leanprover/hex-mod-arith-theory.git"
 rev = "main"
 ```
 
 ```lean
-import HexModArithMathlib
+import HexModArithTheory
 ```
 
 # Functionality
@@ -32,7 +32,7 @@ compatibility lemmas for the word-modular operations.
 # Verification
 
 Use the computational package directly when Mathlib semantics are unnecessary.
-See the [SPEC](SPEC/hex-mod-arith-mathlib.md) for conversion and compatibility
+See the [SPEC](SPEC/hex-mod-arith-theory.md) for conversion and compatibility
 theorems.
 
 # Contributing

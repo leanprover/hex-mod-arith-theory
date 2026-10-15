@@ -14,7 +14,7 @@ public section
 /-!
 Correspondence between the executable `Hex.WordMod` residue ring and Mathlib's
 `ZMod`. `toZMod` sends a Montgomery-form residue to its class in `ZMod m.toNat`;
-the transport lemmas below (mirroring `HexModArithMathlib.ZMod64`) are the
+the transport lemmas below (mirroring `HexModArithTheory.ZMod64`) are the
 homomorphism laws used to lift the executable word arithmetic to Mathlib and,
 downstream, to prove the word-sized CLD kernel byte-identical to the bignum path
 on inputs whose modulus fits in one word.
@@ -24,7 +24,7 @@ does not mention, so `NeZero m.toNat` cannot be a free instance; each proof
 introduces it locally.
 -/
 
-namespace HexModArithMathlib
+namespace HexModArithTheory
 
 open Hex
 
@@ -159,4 +159,4 @@ def toZModRingHom : Hex.WordMod ctx →+* ZMod m.toNat where
 
 end WordMod
 
-end HexModArithMathlib
+end HexModArithTheory

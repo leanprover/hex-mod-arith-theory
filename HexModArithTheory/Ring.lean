@@ -6,12 +6,12 @@ Authors: Kim Morrison
 
 module
 
-public import HexModArithMathlib.ZMod64Equiv
+public import HexModArithTheory.ZMod64Equiv
 public import Mathlib.Algebra.Ring.InjSurj
 
 public section
 
-namespace HexModArithMathlib.ZMod64
+namespace HexModArithTheory.ZMod64
 
 variable {p : Nat} [Hex.ZMod64.Bounds p]
 
@@ -40,4 +40,4 @@ scoped instance commRing : CommRing (Hex.ZMod64 p) :=
     toZMod_neg toZMod_sub toZMod_nsmul toZMod_zsmul toZMod_pow
     toZMod_natCast toZMod_intCast
 
-end HexModArithMathlib.ZMod64
+end HexModArithTheory.ZMod64

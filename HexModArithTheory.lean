@@ -6,14 +6,14 @@ Authors: Kim Morrison
 
 module
 
-public import HexModArithMathlib.ZMod64Equiv
-public import HexModArithMathlib.Ring
-public import HexModArithMathlib.WordMod
+public import HexModArithTheory.ZMod64Equiv
+public import HexModArithTheory.Ring
+public import HexModArithTheory.WordMod
 
 public section
 
 /-!
-The `HexModArithMathlib` library identifies executable `Hex.ZMod64` residues
+The `HexModArithTheory` library identifies executable `Hex.ZMod64` residues
 with Mathlib's `ZMod` API.
 
 It exposes the concrete conversion functions and the ring equivalence between
